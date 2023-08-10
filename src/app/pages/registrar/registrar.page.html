@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Registro</ion-title>
+    <ion-icon name="add" slot="end" size="large" class="ion-margin"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Registre um item aqui!</h1>
+
+  <ion-input type="text" placeholder="Nome do Produto" name="name" [(ngModel)]="form.name"></ion-input>
+  <ion-input type="text" placeholder="Descrição" name="description" [(ngModel)]="form.description"></ion-input>
+  <ion-input type="text" placeholder="Localização" name="location" [(ngModel)]="form.location"></ion-input>
+  <ion-button (click)="enviar()">Enviar</ion-button>
+
+  <br><br><br>
+</ion-content>

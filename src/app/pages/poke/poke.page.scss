@@ -1,0 +1,25 @@
+.cont, .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search {
+    flex-direction: row;
+}
+
+.pesq {
+    width: 40vw;
+    height: 5vh;
+    margin-right: 20px;
+}
+
+.link {
+    padding: 1vh 2vw;
+    margin: 2vh auto;
+    background-color: black;
+   //border: 1px solid black;
+    color: white;
+    text-decoration: none;
+}

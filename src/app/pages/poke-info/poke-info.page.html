@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Poke-informações</ion-title>
+    <ion-icon name="cube" slot="end" size="large" class="ion-margin"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">poke-info</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container" *ngIf="item">
+    <h1>{{item.name}}</h1>
+    <img src="{{item.sprites.front_default}}" alt="">
+    <p>Tipo: {{item.types[0].type.name}}</p>
+    <div></div>
+    <p>Proxima Evolução: {{item.forms[0].name}}</p>
+    <p>Altura: {{item.height}}</p>
+    <p>Largura: {{item.weight}}</p>
+    <p>Filme: {{item.moves[0].move.name}}</p>
+  </div>
+
+</ion-content>

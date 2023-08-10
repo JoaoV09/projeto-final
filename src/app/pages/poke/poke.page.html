@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Pokemons</ion-title>
+    <ion-icon name="cube" slot="end" size="large" class="ion-margin"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container" *ngIf="poke">
+    <div class="search">
+      <input type="text" class="pesq" name="nome" [(ngModel)]="nome" placeholder="Pesquise o pokemon aqui!">
+      <ion-button (click)="atualizar()" >search</ion-button>
+    </div>
+    <div class="container">
+      <div class="cont" *ngIf="poke.name != null">
+        <a class="link" routerLink="/poke-info/{{poke.name}}">{{poke.name}}</a>
+      </div>
+      <div class="cont" *ngFor="let x of poke.results">
+        <a class="link" routerLink="/poke-info/{{x.name}}"> {{x.name}} </a>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
